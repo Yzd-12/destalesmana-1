@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Kontak</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-container {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .message {
+            display: none;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .message.success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kontak Kami</h1>
+    <div class="form-container">
+        <form id="contact-form" action="https://formspree.io/YOUR_FORM_ENDPOINT" method="POST">
+            <input type="text" name="name" placeholder="Nama" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="5" placeholder="Pesan" required></textarea>
+            <button type="submit">Kirim</button>
+            <div id="form-message" class="message"></div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var form = event.target;
+            var messageDiv = document.getElementById('form-message');
+            
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(function(response) {
+                if (response.ok) {
+                    messageDiv.textContent = 'Pesan berhasil dikirim!';
+                    messageDiv.className = 'message success';
+                    form.reset();
+                } else {
+                    messageDiv.textContent = 'Terjadi kesalahan, silakan coba lagi.';
+                    messageDiv.className = 'message error';
+                }
+            }).catch(function(error) {
+                messageDiv.textContent = 'Terjadi kesalahan, silakan coba lagi.';
+                messageDiv.className = 'message error';
+            });
+        });
+    </script>
+</body>
+</html>

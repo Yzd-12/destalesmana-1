@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lihat berbagai produk aplikasi kasir yang kami tawarkan untuk membantu bisnis Anda.">
+    <title>Produk</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="icon" href="logo rzf.png" type="image/x-icon">
+   
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: white;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #66CDAA;
+            color: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #66CDAA;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin: 0.5rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: white;
+        }
+        .product-item {
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+            margin: 1rem 0;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .product-item:hover {
+            transform: translateY(-10px);
+        }
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        /* Media queries for responsive design */
+        @media (max-width: 768px) {
+            nav ul li a {
+                padding: 0.5rem 0.75rem;
+            }
+        }
+        .button-link {
+             background: linear-gradient(to right, #d3d3d3, #a9a9a9);  /* Warna dasar tombol */
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px; /* Membuat sudut membulat */
+            transition: background-color 0.3s, transform 0.3s; /* Transisi untuk animasi */
+        }
+
+        .button-link:hover {
+            background: linear-gradient(to right, #e0e0e0, #cfcfcf); /* Warna saat di-hover */
+            transform: scale(1.1); /* Skala sedikit lebih besar saat di-hover */
+        }
+    </style>
+</head>
+<body>
+       <header>
+        <center>
+           <img src="logo rzf.png" alt="Logo Perusahaan" width="80" height="auto">
+           </center>
+        <h1 class="text-center">Produk Terbaik Kami</h1>
+        <nav>
+            <ul class="d-flex justify-content-center flex-wrap">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="product.html">Produk</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="features.html">Fitur</a></li>
+                <li><a href="pricing.html">Harga</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="testimonials.html">Testimoni</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container my-4">
+        <section class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+                    <img src="https://www.rzfsoftware.com/sites/default/files/cover-website-minimarket.png" alt="Contoh Gambar" width="400" height="400">
+                    <h3>RZF Minimarket</h3>
+                    <p>Software aplikasi yang didesain untuk minimarket, sistem yang bisa digunakan untuk memudahkan transaksi.</p>
+                    <p style="font-size: 15px; color: black;"><b>RP. 2.900.000,00</b></p>
+                    <a href="rzfminimarket.html" class="button-link">Detail</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+   <img src="https://www.rzfsoftware.com/sites/default/files/cover-rzf-toko-grosir.jpg" alt="Contoh Gambar" width="400" height="400">
+                    <h3>RZF Toko Grosir</h3>
+                    <p>Software aplikasi yang didesain khusus untuk toko dengan penjualan langsung pada konsumen atau eceran.</p>
+                    <p style="font-size: 15px; color: black;"><b>RP. 2.600.000,00</b></p>
+                    <a href="rzftokogrosir.html" class="button-link">Detail</a>
+
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+   <img src="https://www.rzfsoftware.com/sites/default/files/cover-toko-retail.jpg" alt="Contoh Gambar" width="400" height="400">
+                    <h3>RZF Toko Retail</h3>
+                    <p>Software aplikasi yang didesain khusus untuk toko dengan penjualan lebih dari satu jenis pelanggan.</p>
+                    <p style="font-size: 15px; color: black;"><b>RP. 2.300.000,00</b></p>
+                    <a href="rzfretail.html" class="button-link">Detail</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+   <img src="https://www.rzfsoftware.com/sites/default/files/background-rzf-pam-web.jpg" alt="Contoh Gambar" width="400" height="400">
+                    <h3>RZF Pam</h3>
+                    <p>RZF PAM adalah aplikasi kasir yang dirancang khusus untuk membantu usaha Penyedia Air Minum (PAM). Dengan RZF PAM, urusan penagihan air jadi lebih mudah, cepat, dan menyenangkan.</p>
+                    <p style="font-size: 15px; color: black;"><b>RP. 2.300.000,00</b></p>
+                    <a href="rzfpam.html" class="button-link">Detail</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+   <img src="https://www.rzfsoftware.com/sites/default/files/bangunan-cover-retail.png" alt="Contoh Gambar" width="400" height="400">
+                    <h3>RZF Bangunan Retail</h3>
+                    <p>Software aplikasi yang didesain khusus untuk toko bangunan dengan penjualan langsung pada konsumen atau eceran. Aplikasi ini dirancang untuk memudahkan dalam pengelolaan toko bangunan.</p>
+                    <p style="font-size: 15px; color: black;"><b>RP. 2.300.000,00</b></p>
+                    <a href="rzfbangunanretail.html" class="button-link">Detail</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+   <img src="https://www.rzfsoftware.com/sites/default/files/cover-rzf-bangunan-grosir.jpg" alt="Contoh Gambar" width="400" height="400">
+                    <h3>RZF Bangunan Grosir</h3>
+                    <p>Software aplikasi yang didesain khusus untuk toko bangunan dengan penjualan langsung pada konsumen atau eceran. Aplikasi ini dirancang untuk memudahkan dalam pengelolaan toko bangunan.</p>
+                    <p style="font-size: 15px; color: black;"><b>RP. 2.600.000,00</b></p>
+                    <a href="rzfbangunangrosir.html" class="button-link">Detail</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+               <img src="https://www.rzfsoftware.com/sites/default/files/cover-rzf-apotek-retail.jpg" alt="Deskripsi Gambar">
+                    <h3>RZF Apotek Retail</h3>
+                    <p>Software aplikasi yang didesain khusus untuk apotek dengan penjualan langsung pada konsumen atau eceran. Aplikasi ini dirancang untuk memudahkan dalam pengelolaan apotek, toko obat, toko alkes atau usaha sejenis lainnya</p>
+                    <p style="font-size: 15px; color: black;"><b>RP. 2.300.000,00</b></p>
+                    <a href="rzfapotekretail.html" class="button-link">Detail</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+               <img src="https://www.rzfsoftware.com/sites/default/files/cover-rzf-apotek-grosir.jpg" alt="Deskripsi Gambar">
+                    <h3>RZF Apotek Grosir</h3>
+                    <p>Software aplikasi yang didesain khusus untuk apotek atau toko alkes dengan penjualan lebih dari satu jenis pelanggan. Seperti penjualan eceran, penjualan partai atau sales, maupun penjualan cabang atau agen.</p>
+                    <p style="font-size: 15px; color: black;"><b>RP. 2.600.000,00</b></p>
+                    <a href="rzfapotekgrosir.html" class="button-link">Detail</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+               <img src="https://www.rzfsoftware.com/sites/default/files/cover-rzf-klinik.jpg" alt="Deskripsi Gambar">
+                    <h3>RZF Klinik</h3>
+                    <p>RZF Klinik  merupakan perangkat lunak aplikasi yang dirancang khusus untuk klinik dalam memfasilitasi proses dalam pemeriksaan pasien, pembelian dan penjualan obat atau alkes. Aplikasi ini dirancang untuk membantu Anda.</p>
+                    <p style="font-size: 15px; color: black;"><b>RP. 3.100.000,00</b></p>
+                    <a href="rzfklinik.html" class="button-link">Detail</a>
+                </div>
+            </div>
+              <div class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+               <img src="https://www.rzfsoftware.com/sites/default/files/cover-rzf-puskesmas.jpg" alt="Deskripsi Gambar">
+                    <h3>RZF Puskesmas</h3>
+                    <p>RZF Puskesmas merupakan software aplikasi yang didesain khusus untuk membantu dalam memudahkan proses pengelolaan data puskesmas seperti pendaftaran dan pemeriksaan pasien, pendataan obat, UGD, rawat inap dan lainnya. </p>
+                    <p style="font-size: 15px; color: black;"><b>RP. 3.100.000,00</b></p>
+                    <a href="rzfpuskesmas.html" class="button-link">Detail</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+               <img src="https://www.rzfsoftware.com/sites/default/files/cover-website-percetakan.jpg" alt="Deskripsi Gambar">
+                    <h3>RZF Percetakan</h3>
+                    <p style="font-size: 20px;">Aplikasi yang didesain untuk usaha percetakan, sistem yang dapat Anda gunakan untuk memudahkan dalam pelayanan jasa percetakan dan mengontrol jalannya bisnis percetakan lebih maksimal.</p>
+                    <p style="font-size: 15px; color: black;"><b>RP. 2.300.000,00</b></p>
+                    <a href="rzfpercetakan.html" class="button-link">Detail</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+               <img src="https://www.rzfsoftware.com/sites/default/files/cover-toko-komputer.jpg" alt="Deskripsi Gambar">
+                    <h3>RZF Toko Komputer</h3>
+                    <p>RZF Toko Komputer merupakan software aplikasi yang didesain khusus untuk membantu dalam memudahkan proses pengelolaan data toko komputer anda seperti mengelola data Pembelian dan penjualan produk, data pelanggan, data produk, dan masih banyak fitur lainnya. </p>
+                    <p style="font-size: 15px; color: black;"><b>RP. 2.300.000,00</b></p>
+                    <a href="rzftokocomputer.html" class="button-link">Detail</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+               <img src="https://www.rzfsoftware.com/sites/default/files/cover-rzf-resto.jpg" alt="Deskripsi Gambar">
+                    <h3>RZF Resto</h3>
+                    <p>RZF Resto merupakan software aplikasi yang didesain khusus untuk membantu dalam memudahkan proses pengelolaan data resto Anda seperti mengelola data supplier, data pelanggan, data produk, data reservasi, dan masih banyak fitur lainnya. </p>
+                   <p style="font-size: 15px; color: black;"><b>RP. 2.600.000,00</b></p>
+                    <a href="rzfresto.html" class="button-link">Detail</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+               <img src="https://www.rzfsoftware.com/sites/default/files/rzf-manufaktur.jpg" alt="Deskripsi Gambar">
+                    <h3>RZF Manufaktur</h3>
+                    <p>Aplikasi Pengelola Keuangan dengan Fitur Terlengkap, namun Harga Bersahabat.
+Saatnya Usaha Manufaktur Anda Cepat dalam Layanan, Mudah dan Lengkap dalam Administrasi
+Tidak perlu Bayar Bulanan cukup sekali beli. </p>
+<p style="font-size: 15px; color: black;"><b>RP. 2.900.000,00</b></p>
+                    <a href="rzfmanufaktur.html" class="button-link">Detail</a>
+                </div>
+            </div>
+               <div class="col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+               <img src="https://www.rzfsoftware.com/sites/default/files/cover-rzf-bengkel.png" alt="Deskripsi Gambar">
+                    <h3>RZF Bengkel</h3>
+                    <p>RZF Bengkel merupakan software aplikasi yang didesain khusus untuk membantu dalam memudahkan proses pengelolaan data bengkel Anda seperti mengelola data pembelian dan penjualan produk, data pelanggan, data produk.</p>
+                    <p style="font-size: 15px; color: black;"><b>RP. 2.600.000,00</b></p>
+                    <a href="rzfbengkel.html" class="button-link">Detail</a>
+                </div>
+            </div>
+        </section>
+        <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+         <style>
+            /* Tombol Kembali ke Atas */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ffda79;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top:hover {
+    background: #fff;
+}
+         </style>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Our Website Fathan Project</p>
+    </footer>
+    <!-- Bootstrap JS dan dependensi -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Section</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">YourLogo</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="testimonial-section">
+        <div class="testimonial-heading">
+            <div class="quote-icon">“</div>
+            <h2>Mereka yang telah Menggunakan</h2>
+        </div>
+        <div class="testimonials" id="testimonials">
+            <div class="testimonial-pair" data-index="1">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <h3>Reyri Jasan</h3>
+                    <p class="title">Owner Toko Sumber Bangunan</p>
+                    <p>Responnya cepat, pelayanannya memuaskan.</p>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <h3>Aulia</h3>
+                    <p class="title">Admin Alhambra Konveksi</p>
+                    <p>Untuk aplikasinya alhamdulillah sangat membantu pengelolaan usaha dan respon pelayanannya cepat.</p>
+                </div>
+            </div>
+            <div class="testimonial-pair" data-index="2">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <h3>Yusuf Hidayat</h3>
+                    <p class="title">Pemilik Yusuf Catering</p>
+                    <p>Solusi terbaik untuk manajemen bisnis kuliner. Pelayanan yang sangat responsif.</p>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <h3>Siti Nurhaliza</h3>
+                    <p class="title">Owner Siti Fashion</p>
+                    <p>Aplikasi yang sangat membantu dalam mengelola penjualan, simpel dan mudah digunakan.</p>
+                </div>
+            </div>
+            <div class="testimonial-pair" data-index="3">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <h3>Agus Ramdani</h3>
+                    <p class="title">Pemilik Warung Nasi Padang</p>
+                    <p>Saya sangat terbantu dengan fitur yang ada di aplikasi ini. Sangat direkomendasikan.</p>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <h3>Budi Santoso</h3>
+                    <p class="title">Pengusaha Kedai Kopi</p>
+                    <p>Pengalaman terbaik menggunakan aplikasi ini. Sangat mudah dan praktis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <button id="prev" onclick="showPage('prev')">Sebelumnya</button>
+            <button id="next" onclick="showPage('next')">Berikutnya</button>
+        </div>
+    </section>
+
+<style>
+ /* Existing styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #093028;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a8e6cf;
+}
+
+.testimonial-section {
+    padding: 40px;
+    background: linear-gradient(135deg, #93b5e1, #a8e6cf);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-section::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    top: -50px;
+    left: -50px;
+    border-radius: 50%;
+}
+
+.testimonial-section::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    bottom: -50px;
+    right: -50px;
+    border-radius: 50%;
+}
+
+.testimonial-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.testimonial-heading h2 {
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.quote-icon {
+    font-size: 48px;
+    color: #ffffff;
+    position: absolute;
+    left: -50px;
+    top: 0;
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial-pair {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.stars {
+    color: #ffd700;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.testimonial h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.testimonial .title {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.testimonial p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.pagination {
+    display: flex;
+    gap: 10px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+    background-color: #e0e0e0;
+}
+
+.pagination button:disabled {
+    background-color: #bdbdbd;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quote-icon {
+        left: 0;
+        top: -40px;
+        position: absolute;
+    }
+
+    .testimonial-section {
+        padding: 20px;
+    }
+
+    .testimonial-heading h2 {
+        font-size: 24px;
+    }
+
+    .testimonial {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-icon {
+        font-size: 36px;
+        left: 0;
+        top: -30px;
+    }
+
+    .testimonial-heading h2 {
+        font-size: 20px;
+    }
+
+    .stars {
+        font-size: 16px;
+    }
+
+    .testimonial h3 {
+        font-size: 16px;
+    }
+
+    .testimonial .title {
+        font-size: 12px;
+    }
+
+    .testimonial p {
+        font-size: 12px;
+    }
+
+    .pagination button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
+
+
+</style>
+<script>
+    let currentPage = 1;
+const totalPages = document.querySelectorAll('.testimonial-pair').length;
+
+function showPage(direction) {
+    if (direction === 'next' && currentPage < totalPages) {
+        currentPage++;
+    } else if (direction === 'prev' && currentPage > 1) {
+        currentPage--;
+    }
+
+    const testimonialPairs = document.querySelectorAll('.testimonial-pair');
+    testimonialPairs.forEach(pair => {
+        pair.style.display = 'none';
+    });
+
+    document.querySelector(`.testimonial-pair[data-index="${currentPage}"]`).style.display = 'flex';
+
+    document.getElementById('prev').disabled = currentPage === 1;
+    document.getElementById('next').disabled = currentPage === totalPages;
+}
+
+// Initialize the first page
+showPage();
+
+</script>
+</body>
+</html>
